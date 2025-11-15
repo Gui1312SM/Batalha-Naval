@@ -12,7 +12,7 @@ int main(){
     int partes_navio3[3] = {3, 3, 3};
     int partes_navio4[3] = {3, 3, 3};
     
-    // ========== CONFIGURAÇÃO DOS NAVIOS ==========
+    // CONFIGURAÇÃO DOS NAVIOS
     
     // Navio 1 - Horizontal
     int navio1_linha = 1;
@@ -37,7 +37,7 @@ int main(){
     // Variáveis para loops e controle
     int i, j;
     
-    // ========== POSICIONAMENTO DOS NAVIOS ==========
+    // POSICIONAMENTO DOS NAVIOS 
     
     // Navio 1 - Horizontal
     for (i = 0; i < 3; i++) {
@@ -59,7 +59,7 @@ int main(){
         tabuleiro[navio4_linha + i][navio4_coluna - i] = partes_navio4[i];
     }
     
-    // ========== CRIAÇÃO DAS MATRIZES DE HABILIDADES ==========
+    // CRIAÇÃO DAS MATRIZES DE HABILIDADES 
     
     // Tamanho das matrizes de habilidades (7x7)
     int tamanho_habilidade = 7;
@@ -76,7 +76,7 @@ int main(){
     // Centro da matriz de habilidade (ponto de origem)
     int centro = 3; // Para matriz 7x7, o centro está na posição [3][3]
     
-    // ========== CONSTRUÇÃO DA HABILIDADE CONE ==========
+    // CONSTRUÇÃO DA HABILIDADE CONE 
     // Cone: Começa estreito no topo e expande para baixo
     // Formato: linha 0 = 1 posição, linha 1 = 3 posições, linha 2 = 5 posições, etc.
     
@@ -96,7 +96,7 @@ int main(){
         }
     }
     
-    // ========== CONSTRUÇÃO DA HABILIDADE CRUZ ==========
+    //  CONSTRUÇÃO DA HABILIDADE CRUZ 
     // Cruz: Linha central horizontal e coluna central vertical
     
     printf("=== CONSTRUINDO HABILIDADE CRUZ ===\n");
@@ -112,7 +112,7 @@ int main(){
         }
     }
     
-    // ========== CONSTRUÇÃO DA HABILIDADE OCTAEDRO (LOSANGO) ==========
+    // CONSTRUÇÃO DA HABILIDADE OCTAEDRO (LOSANGO) 
     // Octaedro visto de frente: formato de losango
     // Expande do centro para cima/baixo e esquerda/direita
     
@@ -141,7 +141,7 @@ int main(){
         }
     }
     
-    // ========== DEFINIÇÃO DOS PONTOS DE ORIGEM DAS HABILIDADES ==========
+    //  DEFINIÇÃO DOS PONTOS DE ORIGEM DAS HABILIDADES 
     
     // Ponto de origem da habilidade CONE no tabuleiro
     int cone_origem_linha = 2;
@@ -158,7 +158,7 @@ int main(){
     // Variável para escolher qual habilidade exibir (1=Cone, 2=Cruz, 3=Octaedro, 0=Nenhuma)
     int habilidade_ativa = 1; // Altere este valor para visualizar diferentes habilidades
     
-    // ========== SOBREPOSIÇÃO DA HABILIDADE NO TABULEIRO ==========
+    // SOBREPOSIÇÃO DA HABILIDADE NO TABULEIRO 
     
     // Cria uma cópia do tabuleiro para aplicar a habilidade
     int tabuleiro_com_habilidade[10][10];
@@ -234,12 +234,12 @@ int main(){
         }
     }
     
-    // ========== EXIBIÇÃO DO TABULEIRO ORIGINAL ==========
+    //  EXIBIÇÃO DO TABULEIRO ORIGINAL 
     
     printf("\n");
-    printf("=============================================\n");
+    printf("=\n");
     printf("     TABULEIRO ORIGINAL - 4 NAVIOS     \n");
-    printf("=============================================\n\n");
+    printf("=\n\n");
     
     printf("   ");
     for (i = 0; i < 10; i++) {
@@ -261,13 +261,13 @@ int main(){
         printf("\n");
     }
     
-    // ========== EXIBIÇÃO DO TABULEIRO COM HABILIDADE ==========
+    // EXIBIÇÃO DO TABULEIRO COM HABILIDADE
     
     if (habilidade_ativa > 0) {
         printf("\n");
-        printf("=============================================\n");
+        printf("=\n");
         printf("   TABULEIRO COM ÁREA DE EFEITO DA HABILIDADE\n");
-        printf("=============================================\n\n");
+        printf("=\n\n");
         
         printf("   ");
         for (i = 0; i < 10; i++) {
@@ -290,12 +290,12 @@ int main(){
         }
     }
     
-    // ========== EXIBIÇÃO DAS MATRIZES DE HABILIDADES ==========
+    // EXIBIÇÃO DAS MATRIZES DE HABILIDADES 
     
     printf("\n");
-    printf("=============================================\n");
+    printf("=\n");
     printf("      VISUALIZAÇÃO DAS HABILIDADES (7x7)    \n");
-    printf("=============================================\n");
+    printf("=\n");
     
     // Exibe Habilidade CONE
     printf("\nHABILIDADE CONE:\n");
@@ -339,9 +339,9 @@ int main(){
         printf("\n");
     }
     
-    // ========== LEGENDA FINAL ==========
+    //  LEGENDA FINAL 
     
-    printf("\n=============================================\n");
+    printf("\n=\n");
     printf("LEGENDA:\n");
     printf("  0 = Água\n");
     printf("  3 = Navio\n");
@@ -352,7 +352,7 @@ int main(){
     printf("  2 = Cruz\n");
     printf("  3 = Octaedro (Losango)\n");
     printf("  0 = Nenhuma habilidade\n");
-    printf("=============================================\n");
+    printf("==\n");
 
     return 0;
 }
